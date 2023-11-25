@@ -11,8 +11,8 @@ from opensearchpy import OpenSearch, RequestsHttpConnection
 from requests_aws4auth import AWS4Auth
 
 def lambda_handler(event, context):
-    sns_topic_arn = "arn:aws:sns:us-east-1:565288435091:MyFoodTopic"
-    #arn:aws:sns:us-east-1:565288435091:test use this arn for sms
+    sns_topic_arn = " "
+    # :test use this arn for sms
 
     ################################################################################################### 
     # Create BOTO3 client with dynamoDB paramater and IAM access keys
@@ -20,14 +20,14 @@ def lambda_handler(event, context):
     sns = boto3.client("sns")
     sqs = boto3.client("sqs")
     dynamodb = boto3.resource("dynamodb")
-    queue_url = "https://sqs.us-east-1.amazonaws.com/565288435091/FoodQueue"
+    queue_url = " "
 
     ################################################################################################### 
     # Security Credentials [Remember to not publicly expose these variables]
     ################################################################################################### 
-    access_key  = "AKIAYHHOQ7WJUAH3SQN4"
-    secret_key  = "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"
-    host        = "search-test1-lb32venz5kwapwyz275f52qjbi.us-east-1.es.amazonaws.com"
+    access_key  = " "
+    secret_key  = " "
+    host        = " "
     region      = "us-east-1"
     service     = "es"
     
