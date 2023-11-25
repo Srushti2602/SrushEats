@@ -5,7 +5,7 @@ import decimal
 import boto3
 
 sqs = boto3.client('sqs')
-queue_url = 'https://sqs.us-east-1.amazonaws.com/565288435091/FoodQueue'
+queue_url = ''
 
 def get_slots(intent_request):
     return intent_request['sessionState']['intent']['slots']
